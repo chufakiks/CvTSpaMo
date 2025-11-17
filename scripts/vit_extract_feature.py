@@ -25,7 +25,7 @@ torch.manual_seed(_GLOBAL_SEED)
 class ViTFeatureReader(object):
     def __init__(
         self, 
-        model_name='openai/clip-vit-large-patch14', 
+        model_name='microsoft/cvt-w24-384-22k', 
         cache_dir=None,
         device='cuda:0', 
         s2_mode='s2wrapping',
@@ -65,13 +65,13 @@ def get_parser():
     parser.add_argument('--video_root', help='location of tsv files', required=True)
     parser.add_argument('--device', help='device to use', default='cuda:0')
     parser.add_argument('--s2_mode', default='')
-    parser.add_argument('--scales', nargs='+', type=int, help='List of scales', default=[])
+    parser.add_argument('--scales', nargs='+', type=int, help='List of scales', default=['microsoft/cvt-w24-384-22k'])
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--nth_layer', type=int, default=-1)
     parser.add_argument('--cache_dir', help='cache dir for model', default=None)
     
     parser.add_argument('--save_dir', help='where to save the output', required=True)
-    parser.add_argument('--model_name', help='ViT model name', default='openai/clip-vit-large-patch14')
+    parser.add_argument('--model_name', help='ViT model name', default='microsoft/cvt-w24-384-22k')
 
     return parser
 
