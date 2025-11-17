@@ -48,7 +48,7 @@ class ViTFeatureReader(object):
         batch = self.image_processor(list(video), return_tensors="pt")
         pixel_values = batch['pixel_values'].to(self.device)
         outputs = self.forward_features(inputs)
-        return outputs[:, 0]
+        return outputs[:, 0].cpu().detach()
 
 
 def get_parser():
