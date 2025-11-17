@@ -65,7 +65,7 @@ def get_parser():
     parser.add_argument('--video_root', help='location of tsv files', required=True)
     parser.add_argument('--device', help='device to use', default='cuda:0')
     parser.add_argument('--s2_mode', default='')
-    parser.add_argument('--scales', nargs='+', type=int, help='List of scales', default=['microsoft/cvt-w24-384-22k'])
+    parser.add_argument('--scales', nargs='+', type=int, help='List of scales', default=[''])
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--nth_layer', type=int, default=-1)
     parser.add_argument('--cache_dir', help='cache dir for model', default=None)
