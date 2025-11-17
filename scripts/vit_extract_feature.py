@@ -1,7 +1,6 @@
 import argparse
 import os
 import os.path as osp
-import glob
 import tqdm
 import torch
 import numpy as np
